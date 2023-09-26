@@ -1,4 +1,4 @@
-// Tasks Examples My studies
+// // Tasks Examples My studies
 async function showAvatar() {
 
     // запрашиваем JSON с данными пользователя
@@ -24,3 +24,17 @@ async function showAvatar() {
   }
   
   showAvatar();
+
+// 2
+async function loadJson(url) {
+    let response = await fetch(url);
+        if (response.status == 200) {
+            let json = await response.json();
+            return json;
+        } 
+            throw new Error(response.status)
+        }
+
+
+loadJson('no-such-user.json')
+    .catch(alert);
