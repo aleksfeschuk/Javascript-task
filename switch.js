@@ -27,3 +27,38 @@ if (browser == 'Edge') {
 } else {
     alert('Маємо надію, що ця сторінка виглядає добре!');
 }
+
+
+// 2
+// Перепишіть код нижче використовуючи одну конструкцію switch:
+let a = +prompt('a?', '');
+
+if (a == 0) {
+  alert( 0 );
+}
+if (a == 1) {
+  alert( 1 );
+}
+
+if (a == 2 || a == 3) {
+  alert( '2,3' );
+}
+
+// switch
+
+switch (a) {
+  case 0:
+    alert(0);
+    break;
+  case 1:
+    alert(1);
+    break;
+  case 2:
+  case 3:
+    alert('2,3');
+    break;
+  default:
+    console.log("The number is correct");
+}
+
+
